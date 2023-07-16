@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/man-scream.mp3-5da30344df0ca8f42bb7d04ded95fa3d.mp3str"
+
+[deps]
+
+source_file="res://asset/Music/man-scream.mp3"
+dest_files=[ "res://.import/man-scream.mp3-5da30344df0ca8f42bb7d04ded95fa3d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

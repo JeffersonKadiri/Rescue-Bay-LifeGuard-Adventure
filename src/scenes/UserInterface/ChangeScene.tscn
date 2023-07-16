@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://asset/Sprite/forward.png" type="Texture" id=1]
+[ext_resource path="res://src/script/ChangeScene.gd" type="Script" id=2]
+[ext_resource path="res://asset/Fonts/Button.tres" type="Theme" id=3]
+
+[node name="ChangeScene" type="Button"]
+margin_right = 12.0
+margin_bottom = 20.0
+theme = ExtResource( 3 )
+text = "Play"
+icon = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]

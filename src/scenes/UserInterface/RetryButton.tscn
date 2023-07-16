@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/script/RetryButton.gd" type="Script" id=1]
+[ext_resource path="res://asset/Fonts/Button.tres" type="Theme" id=2]
+[ext_resource path="res://asset/Sprite/return.png" type="Texture" id=3]
+
+[node name="RetryButton" type="Button"]
+margin_right = 130.0
+margin_bottom = 40.0
+theme = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Retry"
+icon = ExtResource( 3 )
+script = ExtResource( 1 )
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]

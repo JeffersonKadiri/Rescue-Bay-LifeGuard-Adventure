@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/script/QuitButton.gd" type="Script" id=1]
+[ext_resource path="res://asset/Fonts/Button.tres" type="Theme" id=3]
+[ext_resource path="res://asset/Sprite/cross.png" type="Texture" id=4]
+
+[node name="QuitButton" type="Button"]
+margin_right = 130.0
+margin_bottom = 43.0
+theme = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 0.992157, 0.992157, 1 )
+text = "Quit"
+icon = ExtResource( 4 )
+script = ExtResource( 1 )
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]

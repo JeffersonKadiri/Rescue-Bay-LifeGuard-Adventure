@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://asset/Music/victory.mp3" type="AudioStream" id=1]
+[ext_resource path="res://asset/Sprite/next.png" type="Texture" id=2]
+[ext_resource path="res://src/script/VictoryInterface.gd" type="Script" id=3]
+[ext_resource path="res://asset/Sprite/CartoonLifeRing.png" type="Texture" id=4]
+[ext_resource path="res://asset/Fonts/HealthTheme.tres" type="Theme" id=5]
+[ext_resource path="res://asset/Sprite/CheckMark.png" type="Texture" id=6]
+[ext_resource path="res://asset/Fonts/Button.tres" type="Theme" id=7]
+
+[node name="VictoryInterface" type="Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.443137 )
+
+[node name="Pngwingcom" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -81.0
+margin_top = 128.0
+margin_right = 96.0
+margin_bottom = 299.0
+texture = ExtResource( 6 )
+expand = true
+
+[node name="TextureRect" type="TextureRect" parent="Pngwingcom"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -62.5
+margin_top = -64.0
+margin_right = 62.5
+margin_bottom = 64.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -158.0
+margin_top = 18.0
+margin_right = 168.0
+margin_bottom = 39.0
+theme = ExtResource( 5 )
+text = "You are a hero!!!"
+align = 1
+valign = 1
+
+[node name="NextButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -81.0
+margin_top = -234.0
+margin_right = 95.0
+margin_bottom = -176.0
+theme = ExtResource( 7 )
+text = "Next Level"
+icon = ExtResource( 2 )
+
+[node name="VictorySound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+
+[connection signal="button_up" from="NextButton" to="." method="_on_button_up"]

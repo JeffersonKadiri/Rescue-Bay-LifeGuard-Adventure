@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://asset/Sprite/Victim.png" type="Texture" id=1]
+[ext_resource path="res://src/script/Victim.gd" type="Script" id=2]
+[ext_resource path="res://asset/Sprite/help-message-icon.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 9 )
+
+[node name="Victim" type="Area2D"]
+position = Vector2( 125, 61 )
+collision_layer = 8
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, 4.76837e-07 )
+scale = Vector2( 0.594828, 0.561475 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1, 8 )
+shape = SubResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 8.0
+margin_top = -6.0
+margin_right = 22.0
+margin_bottom = 2.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.3, 0.3 )
+limit_left = 0
+limit_top = 0
+limit_right = 400
+smoothing_enabled = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
